@@ -1,4 +1,5 @@
 import { Layout, Menu, MenuProps } from "antd";
+import { Outlet } from "react-router-dom";
 const { Header, Content, Footer, Sider } = Layout;
 
 const items: MenuProps["items"] = [
@@ -46,9 +47,7 @@ const MainLayout = () => {
 
         {/* content part */}
         <Content className="mt-12 lg:mt-5 px-5">
-          <div>
-            <h1>main content should dispaly here</h1>
-          </div>
+          <Outlet />
         </Content>
 
         {/* footer part */}
